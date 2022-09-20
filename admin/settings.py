@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # newly add
-    # 'apps.login_app',
-    # 'apps.main_app',
+    'apps.login',
+    'apps.main',
 ]
 
 MIDDLEWARE = [
