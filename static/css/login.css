@@ -1,0 +1,30 @@
+.form-floating-custom {
+    position: relative;
+  }
+  .form-floating-custom > label {
+    padding-left: 60px;
+  }
+  .form-floating-custom > .form-control, .form-floating-custom > .form-select {
+    padding-left: 60px;
+  }
+  .form-floating-custom .form-floating-icon {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 56px;
+    color: var(--bs-text-muted);
+  }
+  
+  .form-floating-custom .form-floating-icon svg {
+    width: 20px;
+    height: 20px;
+  }
