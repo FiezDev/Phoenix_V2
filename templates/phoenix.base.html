@@ -1,11 +1,8 @@
-{% load static %} {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
-<html>
-  <head>
-    <title>{% block title %}{% endblock title %}</title>
-    <link rel="stylesheet" href="{% static 'css/phoenixv2.css' %}" />
-    {% block css %} {% endblock css %}
-  </head>
-  <body data-topbar="dark" class="pace-done">
+{% extends '_base.html' %} 
+{% load static %} 
+
+
+
     <div class="pace pace-inactive">
       <div
         class="pace-progress"
@@ -22,6 +19,7 @@
     <!-- <body data-layout="horizontal"> -->
 
     <!-- Begin page -->
+    {% block base %} 
     <div id="layout-wrapper">
       <header id="page-topbar">
         <div class="navbar-header">
@@ -1412,7 +1410,6 @@
 
     <!-- Right bar overlay-->
     <div class="rightbar-overlay"></div>
-  </body>
 
-  <script src="{% static 'js/feather.js' %}"></script>
-</html>
+    {% block base %} 
+
