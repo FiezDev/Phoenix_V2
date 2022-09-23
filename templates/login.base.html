@@ -1,15 +1,31 @@
 {% extends "_base.html" %}
 {% load static %}
 {% block css %}
-<link rel="stylesheet" href="{% static 'css/auth.css' %}" />
-{% endblock css %} 
+{% endblock css %}
 {% block content %}
 
- <div class="min-h-screen flex md:flex-row flex-col">
-  <div class="xxl:basis-3/12 lg:basis-4/12 md:basis-5/12 bg-white sm:p-12 z-50">{% block loginspace %}{% endblock loginspace %}</div>
-  <div class="md:h-screen xxl:basis-9/12 lg:basis-8/12 md:basis-7/12 bg-center bg-cover bg-no-repeat bg-[url('/static/auth-bg.jpeg')]">              
-    <div class="bg-overlay absolute h-full w-full left-0 bottom-0 right-0 top-0 bg-black opacity-40"></div>
+<div class="min-h-screen flex md:flex-row flex-col">
+  <div class="min-h-screen 2xl:basis-3/12 lg:basis-4/12 md:basis-5/12 bg-white sm:p-12 z-50 flex flex-col items-center justify-between">
+    <div>
+      <a href="login.html">
+        <img src="{% static 'logo.png' %}" alt="My image" />
+      </a>
+    </div>
+  {% block loginspace %}{% endblock loginspace %}
+    <div>
+      <p class="mb-0 mt-3 text-secondary">
+        <small>©2020-2022 NestiFly Company Limited </small>
+      </p>
+    </div>
+  </div>
+  <div class="2xl:basis-9/12 lg:basis-8/12 md:basis-7/12 z-40 md:h-screen bg-center bg-cover bg-no-repeat bg-[url('/static/auth-bg.jpeg')]">
+      <div class="bg-gradient-to-b from-[#2b3940] to-[#000000] absolute h-full w-full left-0 bottom-0 right-0 top-0 opacity-60"></div>
+  </div>
 </div>
-</div>
+
+
+
+
+
 
 {% endblock content %}
