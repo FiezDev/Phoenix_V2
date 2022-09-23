@@ -22,15 +22,16 @@ from django.views.generic import TemplateView
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='registraions/login.html'),
+    path('index/', TemplateView.as_view(template_name='index.html')),
+    path('', TemplateView.as_view(template_name='registrations/login.html'),
          name='main'
          ),
-    path('phoenixv2/', TemplateView.as_view(template_name='phoenixv2.base.html'),
+    path('phoenix/', TemplateView.as_view(template_name='phoenix.base.html'),
          name='phoenixv2'),
     path('twostep/', TemplateView.as_view(template_name='components/twostep.html'),
          name='twostep'
          ),
-    path('phoenixv2/index/', TemplateView.as_view(template_name='components/index.html'),
+    path('phoenix/index/', TemplateView.as_view(template_name='components/index.html'),
          name='index'
          ),
 
@@ -38,7 +39,7 @@ urlpatterns = [
 
     path('login/', auth_views.LoginView.as_view(
         redirect_authenticated_user=True,
-        template_name='registraions/login.html'
+        template_name='registrations/login.html'
     ),
         name='login'
     ),
