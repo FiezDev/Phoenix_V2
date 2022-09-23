@@ -3,16 +3,11 @@
 {% load icon %} 
 {% block title %}Login Page{% endblock title %} 
 {% block css %}
+<link rel="stylesheet" href="{% static 'css/auth.css' %}" />
 <link rel="stylesheet" href="{% static 'css/login.css' %}" />
 {% endblock css %}
 
-<!-- <h2>Login</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Login</button>
-    </form> -->
-    {% block content %} 
+    {% block loginspace %} 
 <div class="auth-content my-auto">
   <div class="d-flex flex-column align-items-center">
     <h4 class="text-primary">Sign In for NTF staffs</h4>
@@ -85,4 +80,4 @@
 
 
 
-{% block javascript %}<script src="{% static 'js/togglepassword.js' %}"></script>{% endblock javascript %} {% endblock content %}
+{% block javascript %}<script src="{% static 'js/togglepassword.js' %}"></script>{% endblock javascript %} {% endblock loginspace %}

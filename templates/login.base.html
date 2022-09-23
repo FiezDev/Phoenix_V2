@@ -1,67 +1,15 @@
+{% extends "_base.html" %}
 {% load static %}
-<html>
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/auth.css' %}" />
+{% endblock css %} 
+{% block content %}
 
-  <head>
-    <title>{% block title %}{% endblock title %}</title>
-    <link rel="stylesheet" href="{% static 'css/auth.css' %}" />
-    {% block css %} {% endblock css %}
-  </head>
-  <body>
-    <div class="auth-page">
-      <div class="container-fluid p-0">
-        <div class="row g-0">
-          <div class="col-xxl-3 col-lg-4 col-md-5 bg-white" style="z-index: 50">
-            <div class="auth-full-page-content d-flex p-sm-5 p-4 vh-100">
-              <div class="w-100">
-                <div class="d-flex flex-column justify-content-between h-100">
-                  <div class="mb-4 mb-md-5 d-flex flex-column align-items-center"
-                  >
-                    <a href="login.html">
-                      <img src="{% static 'logo.png' %}" alt="My image" />
-                    </a>
-                  </div>
-                  {% block content %}{% endblock content %}
-                  <div class="d-flex flex-column align-items-center">
-                    <p class="mb-0 mt-3 text-muted">
-                      <small>©2020-2022 NestiFly Company Limited </small>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end auth full page content -->
-          </div>
-          <!-- end col -->
-          <div class="col-xxl-9 col-lg-8 col-md-7" style="z-index: 40">
-            <div class="auth-bg pt-md-5 p-4 d-flex">
-              <div class="bg-overlay"></div>
-              <ul class="bg-bubbles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <!-- end bubble effect -->
-              <div class="row justify-content-center align-items-end">
-                <div class="col-xl-7">
-                  <div class="p-0 p-sm-4 px-xl-0"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end col -->
-        </div>
-        <!-- end row -->
-      </div>
-      <!-- end container fluid -->
-    </div>
+ <div class="min-h-screen flex md:flex-row flex-col">
+  <div class="xxl:basis-3/12 lg:basis-4/12 md:basis-5/12 bg-white sm:p-12 z-50">{% block loginspace %}{% endblock loginspace %}</div>
+  <div class="md:h-screen xxl:basis-9/12 lg:basis-8/12 md:basis-7/12 bg-center bg-cover bg-no-repeat bg-[url('/static/auth-bg.jpeg')]">              
+    <div class="bg-overlay absolute h-full w-full left-0 bottom-0 right-0 top-0 bg-black opacity-40"></div>
+</div>
+</div>
 
-    {% block javascript %} {% endblock javascript %}
-  </body>
-</html>
+{% endblock content %}
