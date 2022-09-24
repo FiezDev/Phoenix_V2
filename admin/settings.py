@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # 3rd party
-    'bootstrap5',
+
     'django_feather',
 
     # newly add
