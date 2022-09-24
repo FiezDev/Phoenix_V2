@@ -27,8 +27,8 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='registrations/login.html'),
          name='main'
          ),
-    path('twostep/', TemplateView.as_view(template_name='components/twostep.html'),
-         name='twostep'
+    path('2fa/', TemplateView.as_view(template_name='components/2fa.html'),
+         name='2fa'
          ),
     
     path('phoenix/', TemplateView.as_view(template_name='phoenix.base.html'),
