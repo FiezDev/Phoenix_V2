@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # 3rd party
     'compressor',
     'django_feather',
+    "django_browser_reload",
 
     # newly add
     'apps.login',

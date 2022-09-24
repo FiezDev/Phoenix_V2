@@ -1,5 +1,6 @@
 {% load compress %}
 {% load static %}
+{% load django_browser_reload %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +21,7 @@
 <body>
         {% block content %}
         {% endblock content %}
+        {% django_browser_reload_script %}
 </body>
 
 </html>
