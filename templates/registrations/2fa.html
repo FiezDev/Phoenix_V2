@@ -2,8 +2,7 @@
 {% extends 'login.base.html' %} 
 {% load static %} 
 {% load icon %} 
-{% block title %}2FA Page {% endblock title %}
-
+{% block title %}2FA Page{% endblock title %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/twostep.css' %}" />
 {% endblock css %} {% block loginspace %}
@@ -27,7 +26,7 @@
         class="form-control text-center h-[40px] rounded w-full mb-4"
         id="2fa_input"
       />
-      <button class="w-full bg-primary text-white rounded-lg p-2" type="submit">
+      <button class="w-full bg-primary text-white rounded p-2" type="submit">
         Confirm
       </button>
     </form>

@@ -27,7 +27,7 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='registrations/login.html'),
          name='main'
          ),
-    path('2fa/', TemplateView.as_view(template_name='components/2fa.html'),
+    path('2fa/', TemplateView.as_view(template_name='registrations/2fa.html'),
          name='2fa'
          ),
     
@@ -35,8 +35,8 @@ urlpatterns = [
          name='phoenix'),
     
 
-    path('phoenix/index/', TemplateView.as_view(template_name='components/index.html'),
-         name='index'
+    path('phoenix/dashboard/', TemplateView.as_view(template_name='pages/dashboard.html'),
+         name='dashboard'
          ),
 
     # Login and Logout
