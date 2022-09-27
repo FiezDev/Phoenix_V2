@@ -2,12 +2,11 @@
 
 ## Installation
 
-* at root
-* creat you environment with
+at root create you environment with
 ```bash
 virtualenv [envname]
 ```
-* or use P38
+or use P38
 ```bash
 source P38/bin/activate
 ```
@@ -19,9 +18,9 @@ pip install -r requirements.txt
 ```bash
 cd theme/static_src
 ```
-* update npm package ===========only update npm in this folder
+* update npm package 
+* =========== only update npm in [theme/static_src] folder ===========
 ```bash
-cd theme/static_src
 npm i
 npm upgrade
 ```
