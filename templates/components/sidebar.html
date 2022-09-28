@@ -1,13 +1,17 @@
 {% load static %}
 {% load icon %}
 
-<nav class="w-full bg-white h-full flex-col flex text-black text-base items-start">
-  <div class="pt-5 pl-6">
+<nav class="w-full bg-white h-full flex-col flex text-black text-base items-start gap-4 pt-10 pl-6">
+  <h1 class="test-xl">Main</h1>
+  <div class="pl-2">
+   <div class="inline-flex gap-3">    
+    {% icon "home" height="20" width="20" %} 
     <button class="dropdown-btn font-medium">
       Dashboard
-      <div class="down-arrow fa fa-caret-down"></div>
+      <div class="first-line:down-arrow fa fa-caret-down"></div>
     </button>
-    <ul class="text-sm font-medium hidden" id="dropdown-content">
+  </div>
+    <ul class="dropdown-content text-sm font-medium hidden pl-4 pt-1">
       <li>
         <a
           class="flex items-center rounded py-3 pl-3 pr-4 hover:bg-gray-600"
@@ -34,12 +38,18 @@
       </li>
     </ul>
   </div>
-  <div class="pt-5 pl-6">
+  <h1 class="test-xl">Apps</h1>
+
+
+  <div class="pl-2">
+   <div class="inline-flex gap-3">    
+    {% icon "users" height="20" width="20" %} 
     <button class="dropdown-btn font-medium">
-      User
-      <div class="down-arrow fa fa-caret-down"></div>
+      Users
+      <div class="first-line:down-arrow fa fa-caret-down"></div>
     </button>
-    <ul class="text-sm font-medium hidden" id="dropdown-content">
+  </div>
+    <ul class="dropdown-content text-sm font-medium hidden pl-4 pt-1">
       <li>
         <a
           class="flex items-center rounded py-3 pl-3 pr-4 hover:bg-gray-600"
@@ -82,12 +92,15 @@
       </li>
     </ul>
   </div>
-  <div class="pt-5 pl-6">
-    <button class="dropdown-btn font-medium">
-      Loan
-      <div class="down-arrow fa fa-caret-down"></div>
-    </button>
-    <ul class="text-sm font-medium hidden" id="dropdown-content">
+  <div class="pl-2">
+    <div class="inline-flex gap-3">    
+     {% icon "users" height="20" width="20" %} 
+     <button class="dropdown-btn font-medium">
+       Loan
+       <div class="first-line:down-arrow fa fa-caret-down"></div>
+     </button>
+   </div>
+     <ul class="dropdown-content text-sm font-medium hidden pl-4 pt-1">
       <li>
         <a
           class="flex items-center rounded py-3 pl-3 pr-4 hover:bg-gray-600"
@@ -146,12 +159,15 @@
       </li>
     </ul>
   </div>
-  <div class="pt-5 pl-6">
-    <button class="dropdown-btn font-medium">
-      Data
-      <div class="down-arrow fa fa-caret-down"></div>
-    </button>
-    <ul class="text-sm font-medium hidden" id="dropdown-content">
+  <div class="pl-2">
+    <div class="inline-flex gap-3">    
+     {% icon "users" height="20" width="20" %} 
+     <button class="dropdown-btn font-medium">
+       Data
+       <div class="first-line:down-arrow fa fa-caret-down"></div>
+     </button>
+   </div>
+     <ul class="dropdown-content text-sm font-medium hidden pl-4 pt-1">
       <li>
         <a
           class="flex items-center rounded py-3 pl-3 pr-4 hover:bg-gray-600"
@@ -218,12 +234,15 @@
       </li>
     </ul>
   </div>
-  <div class="pt-5 pl-6">
-    <button class="dropdown-btn font-medium">
-      Test
-      <div class="down-arrow fa fa-caret-down"></div>
-    </button>
-    <ul class="text-sm font-medium hidden" id="dropdown-content">
+  <div class="pl-2">
+    <div class="inline-flex gap-3">    
+     {% icon "users" height="20" width="20" %} 
+     <button class="dropdown-btn font-medium">
+       Test
+       <div class="first-line:down-arrow fa fa-caret-down"></div>
+     </button>
+   </div>
+     <ul class="dropdown-content text-sm font-medium hidden pl-4 pt-1">
       <li>
         <a
           class="flex items-center rounded py-3 pl-3 pr-4 hover:bg-gray-600"
@@ -258,12 +277,15 @@
       </li>
     </ul>
   </div>
-  <div class="pt-5 pl-6">
-    <button class="dropdown-btn font-medium">
-      PhoenixV2
-      <div class="down-arrow fa fa-caret-down"></div>
-    </button>
-    <ul class="text-sm font-medium hidden" id="dropdown-content">
+  <div class="pl-2">
+    <div class="inline-flex gap-3">    
+     {% icon "users" height="20" width="20" %} 
+     <button class="dropdown-btn font-medium">
+       PhoenixV2
+       <div class="first-line:down-arrow fa fa-caret-down"></div>
+     </button>
+   </div>
+     <ul class="dropdown-content text-sm font-medium hidden pl-4 pt-1">
     </ul>
   </div>
 
@@ -273,18 +295,19 @@
 
 <script>
   var dropdown = document.getElementsByClassName("dropdown-btn");
+  var dropdownContent = document.getElementsByClassName("dropdown-content");
 
   for (i = 0; i < dropdown.length; i++) {
     let current = dropdown[i]
+    let currentContent = dropdownContent[i]
     let text = dropdown[i].innerText
     dropdown[i].addEventListener("click", function () {
       this.classList.toggle("active");
-      var dropdownContent = this.nextElementSibling;
-      if (dropdownContent.style.display === "block") {
-        dropdownContent.style.display = "none";
+      if (currentContent.style.display === "block") {
+        currentContent.style.display = "none";
         current.innerHTML = text + "<div class=\"up-arrow fa fa-caret-down\"></div>"
       } else {
-        dropdownContent.style.display = "block";
+        currentContent.style.display = "block";
         current.innerHTML = text + "<div class=\"up-arrow fa fa-caret-up\"></div>"
       }
     });
