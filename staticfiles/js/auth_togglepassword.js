@@ -1,4 +1,4 @@
-function toggle() {
+function password_toggle() {
   
   let x = document.getElementById("password-input");
   let y = document.getElementById("password-addon");
