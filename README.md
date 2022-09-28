@@ -6,9 +6,9 @@ at root create you environment with
 ```bash
 virtualenv [envname]
 ```
-or use P38
+then run your env
 ```bash
-source P38/bin/activate
+source [envname]/bin/activate
 ```
 * install django requirement
 ```bash
