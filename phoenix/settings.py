@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #3rd party
      'tailwind',
-     'theme',
+     'tailwindApp',
      'django_browser_reload',
      'django_feather',
      'compressor',
@@ -124,7 +124,7 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-TAILWIND_APP_NAME = 'theme'
+TAILWIND_APP_NAME = 'tailwindApp'
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
