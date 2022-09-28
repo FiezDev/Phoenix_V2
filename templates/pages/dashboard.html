@@ -1,9 +1,7 @@
 {% extends 'phoenix.base.html' %} {% load static %} {% load icon %}
 {% block title %}Admin Dashboard{% endblock title %} {% block page %}
 
-{% block breadcrumb %}    
 {% include 'components/Breadcrumb.html' with page="Dashboard" urlPage="../../phoenix/dashboard" %}
-{% endblock breadcrumb %}
 
  <!-- Statistics Group -->
   <div class="p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
