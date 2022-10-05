@@ -19,34 +19,35 @@ from django.urls import include, path
 from django.contrib.auth import views as auth_views
 from django.views.generic import TemplateView
 
+from apps.authen.views import login_view,twofa_view
+from apps.phoenix.views import dashboard_view
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
     
-    path('', TemplateView.as_view(template_name='registrations/login.html'),
-         name='main'
-         ),
-    path('2fa/', TemplateView.as_view(template_name='registrations/2fa.html'),
-         name='2fa'
-         ),
+    path('', login_view,name='main'),
+    path('login/', login_view,name='login'),
+    path('2fa/', twofa_view,name='2fa'),
+    
+    path('phoenix/dashboard/',dashboard_view,name='dashboard'),
+
     
     path('phoenix/', TemplateView.as_view(template_name='phoenix.base.html'),
          name='phoenix'),
     
 
-    path('phoenix/dashboard/', TemplateView.as_view(template_name='pages/dashboard.html'),
-         name='dashboard'
-         ),
+
 
     # Login and Logout
 
-    path('login/', auth_views.LoginView.as_view(
-        redirect_authenticated_user=True,
-        template_name='registrations/login.html'
-    ),
-        name='login'
-    ),
+    # path('login/', auth_views.LoginView.as_view(
+    #     redirect_authenticated_user=True,
+    #     template_name='registrations/login.html'
+    # ),
+    #     name='login'
+    # ),
 
 
     # path('logout/', auth_views.LogoutView.as_view(

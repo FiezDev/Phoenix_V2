@@ -138,3 +138,7 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 # Media Files
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+LOGIN_URL = 'login/'
+LOGIN_REDIRECT_URL = 'phoenix/dashboard/'
+LOGOUT_REDIRECT_URL = 'login/'
